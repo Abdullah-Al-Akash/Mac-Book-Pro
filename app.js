@@ -1,3 +1,4 @@
+//Declare variable Globally:
 const memoryCost = document.getElementById('memory-cost');
 const storageCost = document.getElementById('storage-cost');
 const deliveryCost = document.getElementById('delivery-cost');
@@ -5,7 +6,6 @@ const deliveryCost = document.getElementById('delivery-cost');
 //Memory Cost Function:
 function totalMemoryCost(id, price) {
         document.getElementById(id).addEventListener('click', function () {
-
                 if (price == 0) {
                         memoryCost.innerText = 0;
                 }
@@ -13,26 +13,11 @@ function totalMemoryCost(id, price) {
                         memoryCost.innerText = 180;
                 }
                 totalCost()
-                // console.log((parseInt(memoryCost.innerText)));
         })
-        // const memoryCost = document.getElementById('memory-cost');
-        // if (price == 0) {
-        //         memoryCost.innerText = 0;
-        // }
-        // else {
-        //         memoryCost.innerText = 180;
-        // }
-        // console.log((parseInt(memoryCost.innerText)));
 }
-totalMemoryCost('memory-8gb', 0);
-totalMemoryCost('memory-16gb', 180);
-//Total Memory Cost:
-// document.getElementById('memory-8gb').addEventListener('click', function () {
-//         totalMemoryCost(0);
-// })
-// document.getElementById('memory-16gb').addEventListener('click', function () {
-//         totalMemoryCost(180);
-// })
+
+totalMemoryCost('memory-8gb', 0);//call for 8GB Memory
+totalMemoryCost('memory-16gb', 180);//call for 16GB Memory
 
 // Total Storage Function:
 function totalStorageCost(id, price) {
@@ -47,28 +32,17 @@ function totalStorageCost(id, price) {
                         storageCost.innerText = 180;
                 }
                 totalCost()
-                // console.log((parseFloat(storageCost.innerText)))
         })
 
 }
-// Storage Cost:
+// Storage Cost Function Call:
 totalStorageCost('storage-256', 0)
 totalStorageCost('storage-512', 100)
 totalStorageCost('storage-1tb', 180)
-// document.getElementById('storage-256').addEventListener('click', function () {
-//         totalStorageCost(0);
-// })
-// document.getElementById('storage-512').addEventListener('click', function () {
-//         totalStorageCost(100);
-// })
-// document.getElementById('storage-1tb').addEventListener('click', function () {
-//         totalStorageCost(180);
-// })
 
 // Delivery Charge Part:
 function deliveryCharge(id, charge) {
         document.getElementById(id).addEventListener('click', function () {
-
                 if (charge == 0) {
                         deliveryCost.innerText = 0;
                 }
@@ -76,29 +50,24 @@ function deliveryCharge(id, charge) {
                         deliveryCost.innerText = 20;
                 }
                 totalCost()
-                // console.log((parseFloat(deliveryCost.innerText)))
         })
 
 }
+// Call Delivery Function
 deliveryCharge('free-delivery', 0);
 deliveryCharge('include-delivery', 20);
-// document.getElementById('free-delivery').addEventListener('click', function () {
-//         const deliveryCost = document.getElementById('delivery-cost');
-//         deliveryCost.innerText = 0
-// })
 
 //Total Cost:
 function totalCost() {
         const total = document.getElementById('total-cost');
-        const basePrice = document.getElementById('base-price');
-        const baseTotalPrice = parseFloat(basePrice.innerText);
-        const totalMemoryCost = parseInt(memoryCost.innerText);
-        const totalStorageCost = parseInt(storageCost.innerText);
-        const totalDeliveryCost = parseInt(deliveryCost.innerText);
-
+        const basePriceText = document.getElementById('base-price');
+        const basePrice = parseFloat(basePriceText.innerText);
+        const totalMemoryCost = parseFloat(memoryCost.innerText);
+        const totalStorageCost = parseFloat(storageCost.innerText);
+        const totalDeliveryCost = parseFloat(deliveryCost.innerText);
         //Summation of Total:
-        total.innerText = baseTotalPrice + totalMemoryCost + totalStorageCost + totalDeliveryCost;
-        const totalCost = parseInt(total.innerText);
+        total.innerText = basePrice + totalMemoryCost + totalStorageCost + totalDeliveryCost;
+        const totalCost = parseFloat(total.innerText);
         return totalCost;
 }
 
@@ -107,12 +76,12 @@ document.getElementById('promo-btn').addEventListener('click', function () {
         const promoCode = document.getElementById('promo-input');
         const promoCodeText = promoCode.value;
         const totalPrice = totalCost();
-        console.log(totalPrice)
+        //Condition for Promo Code:
         if (promoCodeText == 'stevekaku') {
                 const promoDiscountPrice = document.getElementById('promo-discount-price');
                 const discountPrice = (totalPrice / 100) * 20;
                 promoDiscountPrice.innerText = totalPrice - discountPrice;
-                console.log(discountPrice)
         }
         promoCode.value = '';
 })
+// Complete Javascript Code
