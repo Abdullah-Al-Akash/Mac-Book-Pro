@@ -1,11 +1,8 @@
-//Memory Cost Function:
 const memoryCost = document.getElementById('memory-cost');
-
 const storageCost = document.getElementById('storage-cost');
-
 const deliveryCost = document.getElementById('delivery-cost');
 
-
+//Memory Cost Function:
 function totalMemoryCost(id, price) {
         document.getElementById(id).addEventListener('click', function () {
 
@@ -99,7 +96,23 @@ function totalCost() {
         const totalStorageCost = parseInt(storageCost.innerText);
         const totalDeliveryCost = parseInt(deliveryCost.innerText);
 
+        //Summation of Total:
         total.innerText = baseTotalPrice + totalMemoryCost + totalStorageCost + totalDeliveryCost;
         const totalCost = parseInt(total.innerText);
         return totalCost;
 }
+
+//Apply Promo Code:
+document.getElementById('promo-btn').addEventListener('click', function () {
+        const promoCode = document.getElementById('promo-input');
+        const promoCodeText = promoCode.value;
+        const totalPrice = totalCost();
+        console.log(totalPrice)
+        if (promoCodeText == 'stevekaku') {
+                const promoDiscountPrice = document.getElementById('promo-discount-price');
+                const discountPrice = (totalPrice / 100) * 20;
+                promoDiscountPrice.innerText = totalPrice - discountPrice;
+                console.log(discountPrice)
+        }
+        promoCode.value = '';
+})
