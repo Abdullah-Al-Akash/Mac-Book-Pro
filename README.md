@@ -8,7 +8,7 @@
 <li>Bootstrap</li>
 <li>Javascript DOM(Document Object Model</li>
 </ul>
-<img src="https://i.ibb.co/Cb0h1gd/mac-book-netlify-app.png" alt="Mac Book website">
+<img src="images/mac-book.netlify.app_-min.png" alt="Mac Book website">
 
 <p>I think for calculation, DOM is very effective way in Javascript. And everyone can catch it easily.</p>
 <h3>Thank You</h3>
