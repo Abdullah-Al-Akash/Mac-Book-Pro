@@ -85,6 +85,9 @@ document.getElementById('promo-btn').addEventListener('click', function () {
                 const discountPrice = (totalPrice / 100) * 20;
                 promoDiscountPrice.innerText = parseFloat(totalPrice - discountPrice).toFixed(2);
         }
+        else {
+                alert("Promo Code Doesn't Match");
+        }
         promoCode.value = '';
 })
 // Complete Javascript Code
