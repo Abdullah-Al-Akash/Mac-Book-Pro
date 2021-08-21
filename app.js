@@ -68,6 +68,9 @@ function totalCost() {
         //Summation of Total:
         total.innerText = basePrice + totalMemoryCost + totalStorageCost + totalDeliveryCost;
         const totalCost = parseFloat(total.innerText);
+        //Set Grand Total Cost:
+        const promoDiscountPrice = document.getElementById('promo-discount-price');
+        promoDiscountPrice.innerText = totalCost;
         return totalCost;
 }
 
@@ -75,10 +78,10 @@ function totalCost() {
 document.getElementById('promo-btn').addEventListener('click', function () {
         const promoCode = document.getElementById('promo-input');
         const promoCodeText = promoCode.value;
+        const promoDiscountPrice = document.getElementById('promo-discount-price');
         const totalPrice = totalCost();
         //Condition for Promo Code:
         if (promoCodeText == 'stevekaku') {
-                const promoDiscountPrice = document.getElementById('promo-discount-price');
                 const discountPrice = (totalPrice / 100) * 20;
                 promoDiscountPrice.innerText = totalPrice - discountPrice;
         }
