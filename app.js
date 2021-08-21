@@ -83,7 +83,7 @@ document.getElementById('promo-btn').addEventListener('click', function () {
         //Condition for Promo Code:
         if (promoCodeText == 'stevekaku') {
                 const discountPrice = (totalPrice / 100) * 20;
-                promoDiscountPrice.innerText = totalPrice - discountPrice;
+                promoDiscountPrice.innerText = parseFloat(totalPrice - discountPrice).toFixed(2);
         }
         promoCode.value = '';
 })

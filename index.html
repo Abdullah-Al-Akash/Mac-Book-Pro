@@ -10,15 +10,64 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
 </head>
 
 <body>
         <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                        <div class="container">
+                                <a class="navbar-brand" href="#">
+                                        <h2>MacBookPro</h2>
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav me-auto align-items-center mb-2 mb-lg-0">
+                                                <li class="nav-item">
+                                                        <a class="nav-link active" aria-current="page" href="#">
+                                                                Home
+                                                        </a>
+                                                </li>
+                                                <li>
+                                                        <a class="nav-link active" aria-current="page" href="#">
+                                                                Mac
+                                                        </a>
+                                                </li>
+                                                <li>
+                                                        <a class="nav-link active" aria-current="page" href="#">
+                                                                iPad
+                                                        </a>
+                                                </li>
+                                                <li>
+                                                        <a class="nav-link active" aria-current="page" href="#">
+                                                                iPhone
+                                                        </a>
+                                                </li>
+                                                <li>
+                                                        <a class="nav-link active" aria-current="page" href="#">
+                                                                Accessories
+                                                        </a>
+                                                </li>
+                                        </ul>
 
+                                        <div class="d-flex">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                        aria-label="Search">
+                                                <button class="btn btn-success" type="submit">Search</button>
+                                        </div>
+                                </div>
+                        </div>
+                </nav>
         </header>
+        <!-- Header Part Complete -->
         <!-- Main Part Start -->
-        <main class="container pt-2 pb-5">
+        <main class="container mt-5 pt-5 pb-5">
                 <div class="row p-3">
                         <div class="col-lg-5">
                                 <img class="img-fluid pe-2" src="images/mac.png" alt="">
@@ -137,6 +186,29 @@
                 <h1 class="text-center">Total: $<span id="promo-discount-price">1299</span></h1>
                 <!-- Promo Code Part End -->
         </main>
+        <!-- Main Part Complete -->
+        <!-- Footer Part Start -->
+        <footer class="bg-dark text-white pt-5 pb-3">
+                <div class="container">
+                        <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-lg-5 pb-5">
+                                        <h6>Level-4, 34, Maskanda Passport Office Road, Mymensingh.</h6>
+                                        <h6>Official: abc@gmail.com</h6>
+                                        <h6>Helpline : +878545454545 (Available : 09:00am to 7:00pm)</h6>
+                                </div>
+                                <div class="col-lg-3 pb-5 footer-text">
+                                        <h6>About Us</h6>
+                                        <h6>Refund Policy</h6>
+                                        <h6>Terms & Condition</h6>
+                                        <h6>Privacy Policy</h6>
+                                </div>
+                                <div class="col-lg-4">
+                                        <img class="img-fluid rounded" src="images/card.png" alt="">
+                                </div>
+                        </div>
+                </div>
+                <p class="text-center pt-5">Copyright © 2021 Mac Book Pro</p>
+        </footer>
 
         <!-- Bootstrap Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
