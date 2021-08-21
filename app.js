@@ -33,7 +33,6 @@ function totalStorageCost(id, price) {
                 }
                 totalCost()
         })
-
 }
 // Storage Cost Function Call:
 totalStorageCost('storage-256', 0)
@@ -61,6 +60,7 @@ deliveryCharge('include-delivery', 20);
 function totalCost() {
         const total = document.getElementById('total-cost');
         const basePriceText = document.getElementById('base-price');
+        //Parse All Cost
         const basePrice = parseFloat(basePriceText.innerText);
         const totalMemoryCost = parseFloat(memoryCost.innerText);
         const totalStorageCost = parseFloat(storageCost.innerText);
