@@ -1,4 +1,6 @@
-<h5>Live Site: https://mac-book.netlify.app/ </h5>
+<h5>Live Site: https://mac-book.netlify.app/ <br />
+        Promo Code: stevekaku
+ </h5>
 
 # Mac Book Pro || DOM(Document Object Model) Manipulation
 
