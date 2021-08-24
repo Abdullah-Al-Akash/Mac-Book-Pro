@@ -1,4 +1,4 @@
-<h5>Live Site: https://mac-book.netlify.app/ <br />
+<h5>Live Site: https://mac-book.netlify.app/ 
         Promo Code: stevekaku
  </h5>
 
