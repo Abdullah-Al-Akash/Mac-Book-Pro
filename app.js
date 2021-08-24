@@ -3,6 +3,9 @@ const memoryCost = document.getElementById('memory-cost');
 const storageCost = document.getElementById('storage-cost');
 const deliveryCost = document.getElementById('delivery-cost');
 
+const Memory8GB = document.getElementById('memory-8gb');
+const Memory16GB = document.getElementById('memory-16gb');
+
 //Memory Cost Function:
 function totalMemoryCost(id, price) {
         document.getElementById(id).addEventListener('click', function () {
@@ -12,6 +15,9 @@ function totalMemoryCost(id, price) {
                 else {
                         memoryCost.innerText = 180;
                 }
+                Memory8GB.classList.remove('active');
+                Memory16GB.classList.remove('active');
+                document.getElementById(id).classList.add('active');
                 totalCost()
         })
 }
@@ -20,6 +26,10 @@ totalMemoryCost('memory-8gb', 0);//call for 8GB Memory
 totalMemoryCost('memory-16gb', 180);//call for 16GB Memory
 
 // Total Storage Function:
+const storage256GB = document.getElementById('storage-256');
+const storage512GB = document.getElementById('storage-512');
+const storage1TB = document.getElementById('storage-1tb');
+
 function totalStorageCost(id, price) {
         document.getElementById(id).addEventListener('click', function () {
                 if (price == 0) {
@@ -31,15 +41,23 @@ function totalStorageCost(id, price) {
                 else {
                         storageCost.innerText = 180;
                 }
+                storage256GB.classList.remove('active');
+                storage512GB.classList.remove('active');
+                storage1TB.classList.remove('active');
+                document.getElementById(id).classList.add('active');
                 totalCost()
         })
 }
+
 // Storage Cost Function Call:
 totalStorageCost('storage-256', 0)
 totalStorageCost('storage-512', 100)
 totalStorageCost('storage-1tb', 180)
 
 // Delivery Charge Part:
+const freeDelivery = document.getElementById('free-delivery');
+const includeDelivery = document.getElementById('include-delivery');
+
 function deliveryCharge(id, charge) {
         document.getElementById(id).addEventListener('click', function () {
                 if (charge == 0) {
@@ -48,6 +66,9 @@ function deliveryCharge(id, charge) {
                 else {
                         deliveryCost.innerText = 20;
                 }
+                freeDelivery.classList.remove('active');
+                includeDelivery.classList.remove('active');
+                document.getElementById(id).classList.add('active');
                 totalCost()
         })
 
